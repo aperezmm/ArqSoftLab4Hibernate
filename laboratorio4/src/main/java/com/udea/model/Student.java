@@ -20,6 +20,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Student {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE,	generator =	"student_Sequence")
 	
@@ -29,5 +30,15 @@ public class Student {
 	
 	@Column(name = "name")
 	private String	name;
-
+	
+	@Column(name = "edad")
+	private int edad;
+	
+	@Column(name = "rendimiento")
+	private String	rendimiento;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "course_id",	nullable = false)
+	private Course course;
+	
 }
