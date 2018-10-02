@@ -40,5 +40,47 @@ public class Student {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "course_id",	nullable = false)
 	private Course course;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public String getRendimiento() {
+		return rendimiento;
+	}
+
+	public void setRendimiento(String rendimiento) {
+		this.rendimiento = rendimiento;
+	}
+
+	public Course getCourse() {
+		return course;
+	}
+
+	public void setCourse(Course course) {
+		this.course = course;
+	}
+
+	
 	
 }

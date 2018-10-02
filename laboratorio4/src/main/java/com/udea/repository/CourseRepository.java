@@ -5,6 +5,6 @@ import org.springframework.stereotype.Repository;
 
 import com.udea.model.*;
 
-public interface CourserRepository extends CrudRepository<Course,Long>{
+public interface CourseRepository extends CrudRepository<Course,Long>{
    Course findByStudents(long studentId);
 }
