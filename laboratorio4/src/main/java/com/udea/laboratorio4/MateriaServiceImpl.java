@@ -1,12 +1,10 @@
-package com.udea.service;
+package com.udea.laboratorio4;
 
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.udea.model.*;
-import com.udea.repository.*;
 
 @Service
 public class MateriaServiceImpl implements MateriaService{

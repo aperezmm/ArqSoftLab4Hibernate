@@ -1,4 +1,4 @@
-package com.udea.model;
+package com.udea.laboratorio4;
 
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -20,20 +21,20 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Course {
+public class Teacher {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "course_Sequence")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "teacher_Sequence")
 	
-	@SequenceGenerator(name	= "course_Sequence", sequenceName = "COURSE_SEQ")
+	@SequenceGenerator(name	= "teacher_Sequence", sequenceName = "TEACHER_SEQ")
 	
 	private Long id;
 	
 	@Column(name = "name")
 	private String name;
 	
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy	= "course")
-	private List<Student> students;
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy	= "teacher")
+	private List<Teacher> teachers;
 
 	public Long getId() {
 		return id;
@@ -51,13 +52,14 @@ public class Course {
 		this.name = name;
 	}
 
-	public List<Student> getStudents() {
-		return students;
+	public List<Teacher> getTeachers() {
+		return teachers;
 	}
 
-	public void setStudents(List<Student> students) {
-		this.students = students;
+	public void setTeachers(List<Teacher> teachers) {
+		this.teachers = teachers;
 	}
+	
 	
 	
 }

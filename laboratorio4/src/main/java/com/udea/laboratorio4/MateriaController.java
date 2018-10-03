@@ -1,4 +1,4 @@
-package com.udea.demo;
+package com.udea.laboratorio4;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -12,11 +12,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import com.udea.model.Course;
-import com.udea.repository.CourseRepository;
-import com.udea.repository.StudentRepository;
-import com.udea.service.MateriaService;
 
 @Controller
 @RequestMapping(path = "/materiaController")	
